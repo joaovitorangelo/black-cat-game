@@ -13,6 +13,8 @@ const jump = () => {
     }, 500);
 }
 
+document.addEventListener('keydown', jump);
+
 //colision
 const loop = setInterval(() => {
 
@@ -29,15 +31,12 @@ const loop = setInterval(() => {
         cat.style.bottom = `${catPosition}px`;
         
         cat.src = '';
-        cat.style.width = ''
+        cat.style.width = '';
 
         clearInterval(loop);
         clearInterval(scoreInterval);
-    }
-
+    } 
 }, 10);
-
-document.addEventListener('keydown', jump);
 
 //score
 let displayscore = document.getElementById('score');
@@ -61,3 +60,15 @@ const jup = (jup) => {
 
     }, 500);
 }
+
+ // Selecione o botão pelo ID
+ const reloadButton = document.getElementById('reloadButton');
+
+ // Adicione um ouvinte de evento para o clique no botão
+ reloadButton.addEventListener('click', function() {
+     // Recarregue a página
+     location.reload();
+ });
+
+
+
